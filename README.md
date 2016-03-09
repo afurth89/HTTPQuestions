@@ -274,5 +274,25 @@ The DNS stands for the Domain Name System. The DNS is basically the phone book f
 ```
 
 * In the terminal, type `man curl`.  Look at the man page for curl.  What do the following flags do? `-v`, `-X`.  (Hint: to search for a string, type `/` then the text you want, then enter.  To quit the man page, type `q`).
+
+```
+The `-v` flag stands for "verbose". In the context of the "curl", verbose is used to include header data sent and received by the "curl" to make debugging easier.
+
+The `-X` flag stands for "--request". In this case it allows the user to specify a custom request method when communicating with an HTTP server. The default method is GET, but using -X can allow you to specify something different like POST or DELETE.
+```
+
 * What is TCP/IP?  How does it interact with HTTP?
+
+```
+Short for Transmission Control Protocol/Internet Protocol, TCP/IP is a set of rules (or protocols) that govern how information should be packaged before being exchanged across the internet. To put it simply, TCP/IP converts data into small "packets" before transmission.
+
+The IP (Internet Protocol) is responsible for telling the packets where to go and how to get there. They move the data to a computer that is at least one "degree" closer to the final destination, repeating the process until the packets arrive at their final destination. It is like a line of people passing a boulder from the quarry to the cart, person by person.
+
+The TCP (Transmission Control Protocol) is responsible for checking for errors along the way, and submitting resubmission requests when needed.
+```
+
 * Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
+
+```
+HTTP does not break down the data that is being sent in small packets. It is the TCP/IP that breaks it down into small packets.
+```
